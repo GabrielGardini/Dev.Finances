@@ -124,6 +124,11 @@ header{
     background: var(--green);
     color: white;
 }
+
+.card.total.negative{
+    background: var(--red);
+    color: white;
+}
 /*table=====================================*/
 #transaction{
     display:block;

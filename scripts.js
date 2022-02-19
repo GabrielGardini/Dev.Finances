@@ -87,6 +87,12 @@ const DOM ={
     document.getElementById('incomeDisplay').innerHTML = Utils.formatCurrency(Transaction.incomes())
     document.getElementById('expenseDisplay').innerHTML = Utils.formatCurrency(Transaction.expenses())
     document.getElementById('totalDisplay').innerHTML = Utils.formatCurrency(Transaction.total())
+    let total=Transaction.total()
+    if(total<0){
+      document.querySelector('.card.total').classList.add('negative')
+    }else{
+      document.querySelector('.card.total').classList.remove('negative')
+    }
   },
 
   clearTransactions(){
